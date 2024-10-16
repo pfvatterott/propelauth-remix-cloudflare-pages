@@ -6,6 +6,7 @@ import {
   Scripts,
   ScrollRestoration,
 } from "@remix-run/react";
+import { RevalidateSession } from "@propelauth/remix/client";
 
 import "./tailwind.css";
 
@@ -35,6 +36,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
         {children}
         <ScrollRestoration />
         <Scripts />
+        <RevalidateSession />
       </body>
     </html>
   );
